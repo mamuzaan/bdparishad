@@ -33,8 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "bdparishad.herokuapp.com",
-    "localhost",
-    "8000-mamuzaan-bdparishad-a09g0o0qsm7.ws-eu100.gitpod.io",
+    'localhost',  # Add your other allowed hosts here
+    '8000-mamuzaan-bdparishad-a09g0o0qsm7.ws-eu101.gitpod.io',
 ]
 
 
@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'django_summernote',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'cloudinary',
     'blog',
 ]
