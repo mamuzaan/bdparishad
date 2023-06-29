@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'crispy_forms',
+    'widget_tweaks',
     'django.contrib.staticfiles',
     'django_summernote',
     'allauth',
@@ -56,6 +57,21 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+# MESSAGE_TAGS = {
+#     messages.DEBUG: 'alert-info',
+#     messages.INFO: 'alert-info',
+#     messages.SUCCESS: 'alert-success',
+#     messages.WARNING: 'alert-warning',
+#     messages.ERROR: 'alert-danger',
+# }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,7 +102,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'bdparishad.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -146,9 +161,23 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SUMMERNOTE_CONFIG = {
+    # You can put custom Summernote settings
+    'summernote': {
+        # Change editor size
+        'width': '100%',
+        'height': '500'
+    },
+}
+
+CLOUDINARY_STARAGE = {
+    'CLOUDINARY_URL': 'cloudinary://573366951141391:ZgmzqbTZdwruDLSwHZSt1XaI5_Y@dyk9oykhi'
+}
