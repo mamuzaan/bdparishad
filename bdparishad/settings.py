@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     "bdparishad.herokuapp.com",
     'localhost',  # Add your other allowed hosts here
     '8000-mamuzaan-bdparishad-a09g0o0qsm7.ws-eu101.gitpod.io',
+    '8000-mamuzaan-bdparishad-a09g0o0qsm7.ws-eu102.gitpod.io',
 ]
 
 
